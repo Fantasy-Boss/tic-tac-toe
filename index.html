@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="icon" href="assets/icon-96.png" type="image/png">
+    <link rel="stylesheet" href="assets/style.css" type="text/css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name=description content="Tic Tac Toe is a game in which two players seek in alternate
+    turns to complete a row, a column, or a diagonal with either three O's or three X's drawn 
+    in the spaces of a grid of nine squares; noughts and crosses">
+    <!-- IOS Support -->
+    <link rel="apple-touch-icon" href="assets/icon-96.png"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="#e36b0d">
+    <meta name="theme-color" content="#e36b0d">
+</head>
+<body>
+    <form class="board">
+        <div class="boxes">
+            <input class="x" id="x-1" type="checkbox" />
+            <input class="x" id="x-2" type="checkbox" />
+            <input class="x" id="x-3" type="checkbox" />
+            <input class="x" id="x-4" type="checkbox" />
+            <input class="x" id="x-5" type="checkbox" />
+            <input class="x" id="x-6" type="checkbox" />
+            <input class="x" id="x-7" type="checkbox" />
+            <input class="x" id="x-8" type="checkbox" />
+            <input class="x" id="x-9" type="checkbox" />
+            <input class="o" id="o-1" type="checkbox" />
+            <input class="o" id="o-2" type="checkbox" />
+            <input class="o" id="o-3" type="checkbox" />
+            <input class="o" id="o-4" type="checkbox" />
+            <input class="o" id="o-5" type="checkbox" />
+            <input class="o" id="o-6" type="checkbox" />
+            <input class="o" id="o-7" type="checkbox" />
+            <input class="o" id="o-8" type="checkbox" />
+            <input class="o" id="o-9" type="checkbox" />
+            <div class="controls">
+                <div class="control -x">
+                    <div class="control-labels">
+                        <label class="x" for="x-1"></label>
+                        <label class="x" for="x-2"></label>
+                        <label class="x" for="x-3"></label>
+                        <label class="x" for="x-4"></label>
+                        <label class="x" for="x-5"></label>
+                        <label class="x" for="x-6"></label>
+                        <label class="x" for="x-7"></label>
+                        <label class="x" for="x-8"></label>
+                        <label class="x" for="x-9"></label>
+                    </div>
+                </div>
+                <div class="control -o">
+                    <div class="control-labels">
+                        <label class="o" for="o-1"></label>
+                        <label class="o" for="o-2"></label>
+                        <label class="o" for="o-3"></label>
+                        <label class="o" for="o-4"></label>
+                        <label class="o" for="o-5"></label>
+                        <label class="o" for="o-6"></label>
+                        <label class="o" for="o-7"></label>
+                        <label class="o" for="o-8"></label>
+                        <label class="o" for="o-9"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="done">
+                <div class="lead">Winner is</div>
+                <div class="winner"></div>
+                <button type="reset">Again</button>
+            </div>
+            <div class="tie">
+                <span>It's a tie</span><button type="reset">Again</button>
+            </div>
+            <div class="turn">
+                <div class="turn-x"></div>
+                <div class="turn-o"></div>
+            </div>
+        </div>
+        <h1>
+            <span>Tic</span><span>Tac</span><span>Toe</span>
+        </h1>
+    </form>
+    <script>
+        window.addEventListener('load', async function() {
+            if ('serviceWorker' in navigator) {
+                try {
+                    await navigator.serviceWorker.register('sw.js');
+                } catch (err) {
+                    console.log(`SW registration failed`, err);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

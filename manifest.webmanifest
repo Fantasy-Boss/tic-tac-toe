@@ -1,0 +1,24 @@
+{
+    "name": "Tic Tac Toe",
+    "short_name": "Tic Tac Toe",
+    "description": "Tic Tac Toe is a game in which two players seek in alternate turns to complete a row, a column, or a diagonal with either three O's or three X's drawn in the spaces of a grid of nine squares; noughts and crosses",
+    "icons": [
+        {
+            "src": "assets/icon-96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": "index.html",
+    "scope": ".",
+    "display": "fullscreen",
+    "orientation ": "portrait-primary",
+    "theme_color": "#e36b0d",
+    "background_color": "#3dc5e0"
+}
