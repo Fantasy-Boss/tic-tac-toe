@@ -17,7 +17,7 @@
     ],
     "start_url": "index.html",
     "scope": ".",
-    "display": "fullscreen",
+    "display": "standalone",
     "orientation ": "portrait-primary",
     "theme_color": "#e36b0d",
     "background_color": "#3dc5e0"
